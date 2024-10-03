@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Rules from "../components/rules";
+import { useNavigate } from "react-router-dom";
+import LoginForm from "./Login";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -16,16 +20,17 @@ export default function LandingPage() {
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-4">
               <button
-                aria-label="Button 1"
+                onClick={() => navigate("/login")}
+                aria-label="Login"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Button 1
+                Login
               </button>
               <button
                 aria-label="Button 2"
                 className="px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Button 2
+                <Rules />
               </button>
             </div>
             <div className="flex items-center sm:hidden">
