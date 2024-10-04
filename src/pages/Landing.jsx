@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Rules from "../components/rules";
+import Rules from "../components/Rules";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "./Login";
 
